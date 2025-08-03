@@ -1,0 +1,39 @@
+body {
+    background-color: #97d8d3;
+    margin: 0;
+    font-family: serif;
+}
+
+.title {
+    text-align: right;
+    font-size: 3em;
+    font-weight: bold;
+    margin-right: 10vw;
+    margin-top: 30px;
+}
+
+.calc-form {
+    margin-top: 80px;
+    margin-left: 10px;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+}
+
+.calc-form label {
+    margin-right: 10px;
+}
+
+.calc-form select,
+.calc-form input[type="number"] {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 3px 8px;
+    font-size: 1em;
+}
+
+.calc-form button {
+    margin-left: 10px;
+    padding: 4px 10px;
+    font-size: 1em;
+}
