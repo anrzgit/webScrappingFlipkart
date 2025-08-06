@@ -17,6 +17,13 @@
   },
   "customizations": {
     "codespaces": {
+      "repositories": {
+        "anrzgit/webScrappingFlipkart": {
+          "permissions": {
+            "permissions": "write-all"
+          }
+        }
+      },
       "openFiles": [
         "templates/index.html"
       ]
