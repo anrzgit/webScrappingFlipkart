@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flipkart Product Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_webscrap.css') }}">
+</head>
+
+<!-- existing HTML head ... -->
+<body>
+    <div class="container">
+        <h1>Flipkart Product Scraper</h1>
+        {% if result %}
+            <div class="result">
+                {% if result.error %}
+                    <div class="error-message" style="color: red; font-weight: bold;">
+                        {{ result.error }}
+                    </div>
+                {% endif %}
+                {% if result.name %}
+                    <h2>{{ result.name }}<br><small>{{ result.price }}</small></h2>
+                {% endif %}
+                {% if result.specs %}
+                    {% for group, items in result.specs.items() %}
+                        <h3>{{ group }}</h3>
+                        <table>
+                            {% for k, v in items.items() %}
+                                <tr>
+                                    <td><strong>{{ k }}</strong></td>
+                                    <td>{{ v }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+

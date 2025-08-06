@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flipkart Product Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_webscrap.css') }}">
+</head>
+
+<!-- existing HTML head ... -->
+<body>
+    <div class="container">
+        <h1>Flipkart Product Scraper</h1>
+        <form action="/web-scrap-input" method="post">
+            <label for="query">Enter a product name or keyword:</label>
+            <input type="text" id="query" name="query" required>
+            <button type="submit">Get Specs</button>
+        </form>
+    </div>
+</body>
+
